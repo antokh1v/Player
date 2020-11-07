@@ -8,6 +8,7 @@ class MPlayer : Application() {
     val layout = "player.fxml"
 
     override fun start(primaryStage: Stage?) {
+        MainController.s = primaryStage
         System.setProperty("prism.lcdtext", "false")
         primaryStage?.scene = Scene(load<Parent?>(MPlayer::class.java.getResource(layout)))
         primaryStage?.setTitle("XML App")

@@ -20,7 +20,7 @@
 
 <BorderPane prefHeight="453.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <bottom>
-      <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="600.0" spacing="4.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="824.0" spacing="4.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="imageView" fitHeight="80.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER" />
             <HBox fx:id="layout" alignment="CENTER" spacing="4.0" HBox.hgrow="NEVER">
@@ -30,7 +30,7 @@
                   <JFXButton fx:id="next" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" maxHeight="36.0" maxWidth="36.0" minHeight="36.0" minWidth="36.0" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #545454; -fx-background-radius: 50%;" text="Nxt" textFill="WHITE" />
                </children>
             </HBox>
-            <VBox alignment="CENTER" spacing="6.0" HBox.hgrow="SOMETIMES">
+            <VBox alignment="CENTER" prefHeight="86.0" prefWidth="554.0" spacing="6.0" HBox.hgrow="SOMETIMES">
                <children>
                   <HBox>
                      <children>
@@ -74,7 +74,7 @@
       </HBox>
    </bottom>
    <left>
-      <JFXToolbar minHeight="-Infinity" minWidth="60.0" prefWidth="60.0" style="-fx-background-color: #545454;" BorderPane.alignment="CENTER">
+      <JFXToolbar minHeight="-Infinity" minWidth="60.0" prefHeight="374.0" prefWidth="110.0" style="-fx-background-color: #545454;" BorderPane.alignment="CENTER">
          <center>
             <VBox alignment="CENTER" prefHeight="373.0" prefWidth="96.0" spacing="12.0" BorderPane.alignment="CENTER">
                <children>
@@ -90,7 +90,7 @@
                   </JFXToggleNode>
                   <JFXToggleNode fx:id="setting" maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" style="-fx-background-radius: 50%;">
                      <graphic>
-                        <JFXButton maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" style="-fx-background-radius: 50%;" text="Settings" textFill="WHITE" />
+                        <JFXButton fx:id="file" maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" style="-fx-background-radius: 50%;" text="Select" textFill="WHITE" />
                      </graphic>
                   </JFXToggleNode>
                   <JFXToggleNode fx:id="statistics" maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" style="-fx-background-radius: 50%;" />
@@ -101,7 +101,7 @@
       </JFXToolbar>
    </left>
    <center>
-      <VBox BorderPane.alignment="CENTER">
+      <VBox prefWidth="714.0" BorderPane.alignment="CENTER">
          <children>
             <JFXToolbar prefHeight="40.0" style="-fx-background-color: #545454;">
                <left>
@@ -112,9 +112,9 @@
                   </Label>
                </left>
             </JFXToolbar>
-            <TableView>
+            <TableView fx:id="table" VBox.vgrow="ALWAYS" >
               <columns>
-                <TableColumn fx:id="num" prefWidth="75.0" text="Number" />
+                <TableColumn fx:id="num" prefWidth="75.0" text="Number"  />
                 <TableColumn fx:id="name" prefWidth="75.0" text="Title" />
                   <TableColumn fx:id="dur" prefWidth="75.0" text="Duration" />
               </columns>
